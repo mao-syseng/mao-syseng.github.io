@@ -21,12 +21,19 @@
         --main-font: "Space Mono", serif;
       }
       .grid {
-        padding:0 1.5rem;
+        padding: 0 1.5rem;
         justify-content: center;
         display: grid;
         grid-template-columns: repeat(5, 180px);
         grid-template-rows: repeat(5, 140px);
-        gap:7px;
+        gap: 7px;
+      }
+  
+      @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, 180px);
+          gap: 3px;
+        }
       }
       .done {
         border: 2px solid #40a02b !important;
@@ -42,7 +49,7 @@
     </header>
     <main>
       <div class="grid fullbleed">
-          <div class="box">besøg nevø ofte</div>
+        <div class="box">besøg nevø ofte</div>
         <div class="box">flywire soldering</div>
         <div class="box">hvad er der på den anden side af den bro!?</div>
         <div class="box">kom ned i 60'erne</div>
