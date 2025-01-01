@@ -15,19 +15,24 @@
       :root {
         --bg: #eff1f5;
         --fg: #4c4f69;
-        --box-bg: #e6e9ef;
+        --box-bg: #eff1f5;
         --interactive-bg: #e6e9ef;
         --accent: #ea76cb;
         --main-font: "Space Mono", serif;
       }
       .grid {
+        padding:0 1.5rem;
+        justify-content: center;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 10px;
-        .box {
-          margin: 0;
-        }
+        grid-template-columns: repeat(5, 180px);
+        grid-template-rows: repeat(5, 140px);
+        gap:7px;
+      }
+      .done {
+        border: 2px solid #40a02b !important;
+      }
+      .box {
+        border: 2px solid #ea76cb;
       }
     </style>
   </head>
@@ -36,34 +41,34 @@
       <h2>2025 bingo</h2>
     </header>
     <main>
-      <div class="grid">
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
-        <div class="box">yoga 0</div>
+      <div class="grid fullbleed">
+          <div class="box">besøg nevø ofte</div>
+        <div class="box">flywire soldering</div>
+        <div class="box">hvad er der på den anden side af den bro!?</div>
+        <div class="box">kom ned i 60'erne</div>
+        <div class="box">avocado sushi til charlie</div>
+        <div class="box">roguelike spil</div>
+        <div class="box">double date</div>
+        <div class="box">mumrik tattoo</div>
+        <div class="box">nyt hjem</div>
+        <div class="box">læs terry pratchett bog</div>
+        <div class="box">telefon controller</div>
+        <div class="box">løb 5k</div>
+        <div class="box">lav børne computer</div>
+        <div class="box">jojo med luxus</div>
+        <div class="box">hjælp line med baby</div>
+        <div class="box">frost musik afspiller til alva</div>
+        <div class="box">tastatur til børn</div>
+        <div class="box">yoga</div>
+        <div class="box">læs stormlight archive 1-4</div>
+        <div class="box">planke 2 minutter</div>
+        <div class="box">lær at stå på hoved</div>
+        <div class="box">læs wind and truth</div>
+        <div class="box done">lav ny personlig hjemmeside</div>
+        <div class="box">lav en ting fra kusudama bog</div>
+        <div class="box">labryint generator</div>
       </div>
     </main>
+    <footer></footer>
   </body>
 </html>
