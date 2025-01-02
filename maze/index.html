@@ -70,6 +70,7 @@
       .addEventListener("submit", function (event) {
         if (!event.target.checkValidity()) return;
         event.preventDefault();
+        document.getElementById("form").style.display = "none";
         generateGrid();
       });
 
