@@ -20,6 +20,15 @@
         --accent: #ea76cb;
         --main-font: "Space Mono", serif;
       }
+      #grid {
+        padding: 0 1.5rem;
+        justify-content: center;
+        display: grid;
+        gap: 0;
+      }
+      .cell {
+        border: 1px solid #4c4f69;
+      }
     </style>
   </head>
   <body>
@@ -27,19 +36,128 @@
       <h2>maze generator</h2>
     </header>
     <main>
-      <form class="box rows">
+      <form id="form" class="box rows">
         <p>
           <label for="sizeinput">size</label>
-          <input type="number" id="sizeinput" min="5" max="50" value="20" />
+          <input
+            required
+            type="number"
+            id="sizeinput"
+            min="5"
+            max="50"
+            value="20"
+          />
         </p>
         <p>
           <label for="algorithminput">algorithm</label>
-          <select name="algorithm" id="algorithminput" value="1">
+          <select required name="algorithm" id="algorithminput" value="1">
             <option value="1">recursive backtracker</option>
+            <option value="2">cellular automata b3/s12345</option>
           </select>
         </p>
-        <button type="button" class="big">generate</button>
+        <button type="submit" class="big">generate</button>
       </form>
+      <div id="grid"></div>
     </main>
+    <footer></footer>
   </body>
+  <script>
+    const gridElement = document.getElementById("grid");
+    const sizeInput = document.getElementById("sizeinput");
+
+    document
+      .getElementById("form")
+      .addEventListener("submit", function (event) {
+        if (!event.target.checkValidity()) return;
+        event.preventDefault();
+        generateGrid();
+      });
+
+    function generateGrid() {
+      const gridSize = sizeInput.value;
+      const rows = gridSize;
+      const cols = gridSize;
+      gridElement.innerHTML = ''
+      gridElement.style.gridTemplateColumns = `repeat(${cols}, 40px)`;
+      gridElement.style.gridTemplateRows = `repeat(${rows}, 40px)`;
+
+      console.log(gridSize);
+      
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          gridElement.insertAdjacentHTML('beforeend',`<div id="cell-${r}-${c}" class="cell"></div>`);
+        }
+      }
+
+      const directions = [
+        { row: -1, col: 0, wall: "top" }, // Up
+        { row: 1, col: 0, wall: "bottom" }, // Down
+        { row: 0, col: -1, wall: "left" }, // Left
+        { row: 0, col: 1, wall: "right" }, // Right
+      ];
+
+      function removeWall(cell1, cell2, direction) {
+        const cell1Element = document.getElementById(
+          `cell-${cell1.row}-${cell1.col}`
+        );
+        const cell2Element = document.getElementById(
+          `cell-${cell2.row}-${cell2.col}`
+        );
+
+        switch (direction.wall) {
+          case "top":
+            cell1Element.style.borderTop = "none";
+            cell2Element.style.borderBottom = "none";
+            break;
+          case "bottom":
+            cell1Element.style.borderBottom = "none";
+            cell2Element.style.borderTop = "none";
+            break;
+          case "left":
+            cell1Element.style.borderLeft = "none";
+            cell2Element.style.borderRight = "none";
+            break;
+          case "right":
+            cell1Element.style.borderRight = "none";
+            cell2Element.style.borderLeft = "none";
+            break;
+        }
+      }
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      function isValidCell(row, col) {
+        return row >= 0 && row < rows && col >= 0 && col < cols;
+      }
+
+      function generateMaze(row, col, visited) {
+        visited[row][col] = true;
+
+        const currentCell = { row, col };
+        shuffle(directions);
+
+        for (const direction of directions) {
+          const newRow = row + direction.row;
+          const newCol = col + direction.col;
+
+          if (isValidCell(newRow, newCol) && !visited[newRow][newCol]) {
+            const nextCell = { row: newRow, col: newCol };
+            removeWall(currentCell, nextCell, direction);
+            generateMaze(newRow, newCol, visited);
+          }
+        }
+      }
+
+      const visited = Array.from({ length: rows }, () =>
+        Array(cols).fill(false)
+      );
+
+      generateMaze(0, 0, visited);
+    }
+  </script>
 </html>
