@@ -1,0 +1,10 @@
+{
+    "printWidth": 999,
+    "htmlWhitespaceSensitivity": "ignore",
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": false,
+    "proseWrap": "preserve",
+    "embeddedLanguageFormatting": "off"
+  }
+  
