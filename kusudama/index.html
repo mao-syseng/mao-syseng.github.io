@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.1.3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <title>kusudama</title>
+    <style>
+        :root {
+          --bg: #eff1f5;
+          --fg: #4c4f69;
+          --box-bg: #e6e9ef;
+          --interactive-bg: #e6e9ef;
+          --accent: #ea76cb;
+          --main-font: "Space Mono", serif;
+        }
+
+        .steps {
+          display: grid;
+          gap: 15px;
+          grid-template-columns: repeat(3, 30%);
+          grid-template-rows: repeat(5, 30%);
+
+        }
+        svg {
+          max-height: 200px;
+        }
+        center {
+          display: flex;
+        justify-content: center;
+      align-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>stellated octahedron kusudama</h2>
+    </header>
+    <main>
+      <div class="center">
+        <svg viewBox="0 0 209 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M178.362 68.4738L25.2644 66.0282C24.4875 66.0158 23.9939 66.8553 24.3824 67.5281L104.6 206.441C104.992 207.121 105.978 207.104 106.348 206.412L179.228 69.9448C179.581 69.2849 179.11 68.4858 178.362 68.4738Z" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M24 67L110.31 1.02767C110.706 0.725033 111.264 0.760103 111.619 1.10991L180 68.5" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M180.5 68.5L207.764 174.087C207.897 174.6 207.606 175.127 207.102 175.289L107 207.5" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M107 207.5L1.87386 172.789C1.37994 172.625 1.09352 172.111 1.21509 171.605L26 68.5" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M131 200.5L106.147 219.505C105.77 219.793 105.243 219.777 104.885 219.467L83 200.5" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M185.5 89L196.031 67.4595C196.285 66.9401 196.047 66.3142 195.512 66.095L166 54" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M22.5 82.5L20.0988 61.85C20.0419 61.3607 20.3499 60.9028 20.8245 60.771L38 56" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M106 208L103.516 114.096C103.506 113.729 103.698 113.386 104.017 113.203L180 69.5" stroke="#4C4F69" stroke-linecap="round" />
+          <path d="M105 113.5L26.5 67" stroke="#4C4F69" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <p>
+        <a href="https://youtu.be/ju9esC8UaCk?si=dn9ejEhfJ3zNIduy">watch this video first</a>
+        if you have never made a stellated octahedron kusudama. this page is just a simple overview of the folds for the pieces.
+      </p>
+      <p></p>
+
+      <div class="steps">
+        <div>
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="99" height="99" rx="0.5" fill="#EFF1F5" stroke="#4C4F69" />
+            <rect x="50.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <rect x="25.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <rect x="75.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="99" height="99" rx="0.5" fill="#EFF1F5" stroke="#4C4F69" />
+            <rect x="50.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <rect x="25.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <rect x="75.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <path d="M76.0224 99.4642L99.0224 76.4642" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M76 98.99L99.1638 43.0676" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M1 58.99L24.9292 1.21982" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M1 25L25 1" stroke="#4C4F69" stroke-linecap="round" />
+            <rect x="0.5" y="0.5" width="99" height="99" rx="0.5" fill="#EFF1F5" stroke="#4C4F69" />
+            <rect x="50.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <rect x="25.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <rect x="75.25" y="0.25" width="0.5" height="99.5" rx="0.25" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.5" />
+            <path d="M76.0224 99.4642L99.0224 76.4642" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M76 98.99L99.1638 43.0676" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M1 58.99L24.9292 1.21982" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M1 25L25 1" stroke="#4C4F69" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <div>
+          <svg viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M75.8306 99.5H2C1.44772 99.5 1 99.0523 1 98.5V59.2063C1 59.0702 1.02779 58.9355 1.08168 58.8105L25.7396 1.60417C25.8976 1.23751 26.2586 1 26.6579 1H99C99.5523 1 100 1.44771 100 2V42.3019C100 42.4327 99.9743 42.5622 99.9245 42.6831L76.7551 98.8812C76.6007 99.2556 76.2357 99.5 75.8306 99.5Z" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M51 2V99.5" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M26.5 1.5V99.5" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M76.5 1.5V99.5" stroke="#4C4F69" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 53 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.5 49.5L50.0872 102.224C50.5277 103.209 52 102.895 52 101.816V5C52 4.44771 51.5523 4 51 4H27.5C26.9477 4 26.5 4.44772 26.5 5V63M26.5 63V102C26.5 102.552 26.0523 103 25.5 103H2C1.44772 103 1 102.552 1 102V49.5L1.44857 5.09133C1.45965 3.99445 2.97341 3.713 3.37801 4.73259L26.5 63Z" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M27 4H2" stroke="#4C4F69" stroke-linecap="round" />
+            <path d="M51.5 103H26.5" stroke="#4C4F69" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 87 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M68.2738 67.9315L18.7527 96.9309C18.4193 97.1261 18 96.8857 18 96.4995V38.5005C18 38.1143 18.4193 37.8739 18.7527 38.0691L68.2738 67.0685C68.6035 67.2617 68.6035 67.7383 68.2738 67.9315Z" fill="#EFF1F5" stroke="#4C4F69" />
+            <path d="M18.7262 35.0685L68.2473 6.06908C68.5807 5.87389 69 6.11427 69 6.50054V64.4995C69 64.8857 68.5807 65.1261 68.2473 64.9309L18.7262 35.9315C18.3965 35.7383 18.3965 35.2617 18.7262 35.0685Z" fill="#EFF1F5" stroke="#4C4F69" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 87 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M68.2738 67.9315L18.7527 96.9309C18.4193 97.1261 18 96.8857 18 96.4995V38.5005C18 38.1143 18.4193 37.8739 18.7527 38.0691L68.2738 67.0685C68.6035 67.2617 68.6035 67.7383 68.2738 67.9315Z" fill="#EFF1F5" stroke="#4C4F69" />
+            <path d="M18.7262 35.0685L68.2473 6.06908C68.5807 5.87389 69 6.11427 69 6.50054V64.4995C69 64.8857 68.5807 65.1261 68.2473 64.9309L18.7262 35.9315C18.3965 35.7383 18.3965 35.2617 18.7262 35.0685Z" fill="#EFF1F5" stroke="#4C4F69" />
+            <path d="M19.6933 35.0644L66.3557 6.9763C66.8008 6.70833 67.3087 7.21299 67.0435 7.65984L42.5797 48.8859C42.4389 49.1231 42.1325 49.2015 41.8951 49.061L19.6965 35.923C19.3708 35.7303 19.369 35.2595 19.6933 35.0644Z" fill="#EFF1F5" stroke="#4C4F69" />
+            <path d="M67.8067 67.9356L21.1443 96.0237C20.6992 96.2917 20.1913 95.787 20.4565 95.3402L44.9203 54.1141C45.0611 53.8769 45.3675 53.7985 45.6049 53.939L67.8035 67.077C68.1292 67.2697 68.131 67.7405 67.8067 67.9356Z" fill="#EFF1F5" stroke="#4C4F69" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 53 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="51.5997" y="61.25" width="0.500001" height="50.5" rx="0.250001" transform="rotate(90 51.5997 61.25)" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.500001" />
+            <rect x="51.5997" y="29.25" width="0.500001" height="50.5" rx="0.250001" transform="rotate(90 51.5997 29.25)" fill="#EFF1F5" stroke="#4C4F69" stroke-width="0.500001" />
+            <path d="M0.849747 60.9232V1.73367C0.849747 0.963512 1.68378 0.482432 2.35045 0.868052L51.3504 29.2112C51.6595 29.3899 51.8497 29.7198 51.8497 30.0768V89.2663C51.8497 90.0365 51.0157 90.5176 50.349 90.132L1.34904 61.7888C1.04004 61.6101 0.849747 61.2802 0.849747 60.9232Z" stroke="#4C4F69" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 85 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M66.8774 60.9373L21.8439 60.9373C21.37 60.9373 21.1626 60.3068 21.5409 60.0159L66.5744 25.3781C66.8973 25.1298 67.3597 25.3769 67.3597 25.7977L67.3597 60.4355C67.3597 60.7139 67.145 60.9373 66.8774 60.9373Z" fill="#EFF1F5" stroke="#4C4F69" />
+            <path d="M16.7484 25.299L16.7484 58.95C16.7484 59.3632 17.196 59.5973 17.5206 59.3541L63.0643 25.2223C63.4542 24.9302 63.2617 24.2955 62.7848 24.3005L17.2411 24.7812C16.9694 24.7841 16.7484 25.0164 16.7484 25.299Z" fill="#EFF1F5" stroke="#4C4F69" />
+          </svg>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
