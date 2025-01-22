@@ -18,6 +18,10 @@
         --accent: #ea76cb;
         --main-font: "Space Mono", serif;
       }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
     </style>
   </head>
   <body>
@@ -64,7 +68,7 @@
       const entriesList = document.getElementById("entries");
       entriesList.innerHTML = entries
         .map((entry) => {
-          return `<li>${entry.date} - ${entry.kcal} kcal</li>`;
+          return `<li>${entry.date} · ${entry.kcal}</li>`;
         })
         .join(""); 
     }
@@ -84,7 +88,7 @@
         }
       });
 
-      document.getElementById("total").textContent = `Total: ${totalCalories} kcal`;
+      document.getElementById("total").textContent = `Total: ${totalCalories}`;
     }
 
     document.getElementById("calorieForm").addEventListener("submit", function (event) {
