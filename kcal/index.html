@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <title>kcal</title>
+    <title>kcalculater</title>
     <style>
       :root {
         --bg: #eff1f5;
@@ -26,7 +26,7 @@
   </head>
   <body>
     <header>
-      <h2>kcal</h2>
+      <h2>kcalculater</h2>
     </header>
     <main>
       <form class="table rows" id="calorieForm">
@@ -35,13 +35,12 @@
           <input type="number" id="weight" required />
         </p>
         <p>
-          <label for="kcal">kcal/100g</label>
+          <label for="kcal">kcal/100</label>
           <input type="number" id="kcal" required />
         </p>
         <button class="big" type="submit">add</button>
       </form>
       <h3 id="total">total</h3>
-
       <ul id="entries"></ul>
     </main>
     <footer></footer>
